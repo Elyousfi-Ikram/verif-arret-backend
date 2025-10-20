@@ -1,0 +1,13 @@
+[build]
+packages = ["nodejs@20", "npm@10"]
+
+[build.commands]
+install = "npm install --no-audit --no-fund --prefer-offline"
+build = "npm run build"
+
+[deploy]
+start = "npm run prod"
+
+[env]
+NODE_ENV = "production"
+NPM_CONFIG_CACHE = "/tmp/.npm"
